@@ -1,0 +1,82 @@
+#container {
+  width: 30%;
+}
+
+body {
+  background-color: #eee;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.col {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0.2px 1px #fff;
+  border-radius: 2px;
+}
+
+.col:hover {
+  box-shadow: 0 0.3px 2px #fff;
+}
+
+#layer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  --d: 25px;
+  width: 4.5px;
+  height: 4.5px;
+  border-radius: 50%;
+  color: #474bff;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+    calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1.1px,
+    calc(0 * var(--d)) calc(1 * var(--d)) 0 2.2px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3.4px,
+    calc(-1 * var(--d)) calc(0 * var(--d)) 0 4.5px,
+    calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5.6px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 6.7px;
+  animation: spinner-a90wxe 1s infinite steps(8);
+}
+
+@keyframes spinner-a90wxe {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 900px) {
+  #container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  #container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  #container {
+    width: 100%;
+  }
+}
+
+/* added respon to css */
